@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+/**** HAMBURGER MENU ****/
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background: hsl(20, 80%, 80%);
+  transform: translate(0, -100vh);
+  pointer-events: none;
+  transition: transform 0.5s;
+}
+
+.hamburger--visible {
+  transform: translate(0, 0);
+  pointer-events: all;;
+}
+
+.hamburger__close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.hamburger__close:hover {
+  transform: rotate(90deg);
+}
+
+.hamburger__menu {
+  padding: 100px 8rem ;
+  display: grid;
+  grid-template-rows: repeat(4, 20vh);
+}
+
+.hamburger__link {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 10vh;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hamburger__link:hover:nth-child(odd) {
+  transform: rotate(12deg);
+}
+
+.hamburger__link:hover:nth-child(even) {
+  transform: rotate(-12deg);
+}
+
+
+/**** INTRO ****/
+
+.intro {
+  background: url(../img/dessert-intro.jpg) center center;
+  background-size: cover;
+  height: 95vh;
+  position: relative;
+}
+
+.intro__hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: hsl(20, 50%, 90%);
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.intro__hamburger:hover {
+  color: hsl(20, 50%, 80%);
+  transform: rotate(-15deg);
+}
+
+.intro h1 {
+  text-align: center;
+  padding-top: 30vh;
+  font-size: 5rem;
+  font-family: "Fredoka One", cursive;
+  color: hsl(20, 90%, 55%);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0 0 2rem 0;
+}
+
+.intro h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 3rem;
+  font-family: "Fredoka One", cursive;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/**** WELCOME ***/
+
+.welcome {
+  background: linear-gradient(210deg, #943cff 0%, #dd45d3 40.13%, #fc9a57 90%);
+}
+
+.welcome__big {
+  font-family: "Fredoka One", cursive;
+  color: white;
+  padding: 10rem 0;
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: 3.2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/**** DESSERTS ***/
+
+.desserts__big {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+  color: hsl(20, 60%, 60%);
+  padding-top: 5rem;
+}
+
+.desserts-grid {
+  display: grid;
+  padding: 4rem 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-gap: 30px;
+}
+
+.dessert {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dessert img {
+  max-height: 400px;
+}
+
+/**** FOOTER ****/
+
+.footer {
+  background: hsl(20, 20%, 90%);
+  padding: 4rem 0 2rem 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;;
+}
+
+.social__link {
+  border-radius: 50%;
+  background: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 1rem;
+  color: hsl(20, 30%, 80%);
+}
+
+.social__link:last-child {
+  margin-right: 0;;
+}
+
+.footer__address {
+  text-align: center;
+  font-weight: bold;
+  color: hsl(20, 30%, 80%);
+}
