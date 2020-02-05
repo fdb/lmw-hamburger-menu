@@ -1,7 +1,1 @@
-document.querySelector('.intro__hamburger').addEventListener('click', () => {
-  document.querySelector('.hamburger').classList.add('hamburger--visible');
-});
-
-document.querySelector('.hamburger__close').addEventListener('click', () => {
-  document.querySelector('.hamburger').classList.remove('hamburger--visible');
-});
+// Implement the code here. Look in the js-finished/main.js file if you're stuck.
